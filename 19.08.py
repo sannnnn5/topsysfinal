@@ -164,7 +164,7 @@ class InputTableApp(QWidget):
                 for col in range(self.table.columnCount()):
                     item = self.table.item(row, col)
                     if item:
-                        row_data.append(item.text().replace(",", "."))  # Replacing comma with dot for float conversion
+                        row_data.append(item.text().replace(",", ".").strip())  # Replacing comma with dot for float conversion
                     else:
                         row_data.append("")
                 values.append(row_data)
